@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Name from "./Name";
 
 class NameContainer extends Component {
-  
+
+  super(props);
   state = {
     value: ""
   };
@@ -22,7 +23,7 @@ class NameContainer extends Component {
   render() {
     const { value } = this.state;
     return (
-      <Name value={value} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+      <Name value={value} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
     );
   }
 }

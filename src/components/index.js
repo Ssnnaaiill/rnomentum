@@ -1,9 +1,9 @@
 import GlobalStyle from "./GlobalStyle";
 import Name from "./name/Name";
-import NameContainer from "./name/NameContainer";
+import Clock from "./clock/Clock";
 
 export {
   GlobalStyle,
   Name,
-  NameContainer,
-}
+  Clock,
+};

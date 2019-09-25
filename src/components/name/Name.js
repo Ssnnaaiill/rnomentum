@@ -28,6 +28,8 @@ const Input = styled.input`
   all: unset;
   border-bottom: 2px solid #fff;
   text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
 `;
 
 const Name = ({ value, handleChange, handleSubmit }) => (
