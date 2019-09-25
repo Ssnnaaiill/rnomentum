@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GlobalStyle from './components/GlobalStyle';
 import Name from './components/name';
 import Clock from './components/clock';
+import Search from './components/search';
 
 class App extends Component {
 
@@ -40,6 +41,7 @@ class App extends Component {
 				) : (
 					<>
 						<Clock name={name} />
+						<Search />
 					</>
 				)}
 			</>

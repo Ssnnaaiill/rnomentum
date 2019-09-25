@@ -32,7 +32,7 @@ const Greeting = styled.span`
 const Clock = ({ name, time, greeting }) => (
 	<Container>
 		<Time>{time}</Time>
-		<Greeting>{`${greeting}, ${name}`}</Greeting>
+		<Greeting>{`${greeting}, ${name}.`}</Greeting>
 	</Container>
 );
 

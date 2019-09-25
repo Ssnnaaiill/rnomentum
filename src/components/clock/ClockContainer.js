@@ -39,11 +39,11 @@ class ClockContainer extends Component {
 			});
 		} else if (hour >= 17 && hour < 22) {
 			this.setState({
-				greeting: '좋은 저녁이에요',
+				greeting: '좋은 저녁이에요'
 			});
 		} else {
-			this.stateState({
-				greeting: 'Good Night'
+			this.setState({
+				greeting: '잘 자요'
 			});
 		}
 	}
