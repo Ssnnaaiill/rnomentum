@@ -9,14 +9,25 @@ const Container = styled.div`
 `;
 
 const Time = styled.span`
-	font-size: 10em;
+	font-family: 'stencil';
+	font-size: 5rem;
 	font-weight: 500;
 	margin-bottom: 0.5rem;
 `;
 
 const Greeting = styled.span`
-	font-size: 3rem;
+	
+	font-size: 1.5rem;
 `;
+
+
+/**
+ * Clock
+ * - show local clock
+ * @param name
+ * @param time
+ * @param greeting 
+ */
 
 const Clock = ({ name, time, greeting }) => (
 	<Container>

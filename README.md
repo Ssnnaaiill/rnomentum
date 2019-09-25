@@ -7,3 +7,8 @@ CSS를 좀 더 쉽게 적용하기 위해 yarn을 사용하여 `styled-component
 ```
 yarn add styled-components styled-reset prop-types
 ```
+
+다음과 같은 명령어를 사용해서 App을 실행합니다.
+```
+yarn start
+```

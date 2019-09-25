@@ -12,6 +12,7 @@ const fadeAni = keyframes`
 `;
 
 const Form = styled.form`
+	font-family: 'BareunBatang';
 	animation: ${fadeAni} 2s linear;
 	display: flex;
 	flex-direction: column;
@@ -20,18 +21,21 @@ const Form = styled.form`
 
 const Text = styled.span`
 	font-weight: bold;
+	text-align: center;
 	margin-bottom: 0.5rem;
 `;
 
 const Input = styled.input`
 	all: unset;
 	border-bottom: 2px solid #fff;
+	font-size: 1.2rem;
 	text-align: center;
+	padding: 5px;
 `;
 
 const Name = ({ value, handleChange, handleSubmit }) => (
 	<Form onSubmit={handleSubmit}>
-		<Text>Hello, what's your name?</Text>
+		<Text>당신의 이름이 궁금해요.</Text>
 		<Input value={value} onChange={handleChange} />
 	</Form>
 );
