@@ -1,46 +1,48 @@
-import React, { Component } from "react";
-import { GlobalStyle, Name, Clock } from "./components";
+import React, { Component } from 'react';
+import GlobalStyle from './components/GlobalStyle';
+import Name from './components/name';
+import Clock from './components/clock';
 
 class App extends Component {
 
 	state = {
 		name: null,
-  };
-  
-	saveName = (data) => {
+	};
+
+	saveName = data => {
 		this.setState({
 			name: data,
-    });
-    
-    localStorage.setItem("RNOMENTUM_NAME", data);
-  }
-  
+		});
+		localStorage.setItem('MOMENTUM_NAME', data);
+	}
+
 	getName = () => {
-    const name = localStorage.getItem("RNOMENTUM_NAME");
+		const name = localStorage.getItem('MOMENTUM_NAME');
 		if (name !== null) {
-			this.setState ({
+			this.setState({
 				name,
-      });
+			});
 		}
-  }
-  
+	}
+
 	componentDidMount() {
 		this.getName();
-  }
-  
+	}
+
 	render() {
-    const { name } = this.state;
+		const { name } = this.state;
+	
 		return (
 			<>
-			<GlobalStyle />
-			{name === null ? (
-        <Name handleSubmit={this.saveName} />
-			) : (
-        <>
-        <Clock name={name} />
-        </>
-      )}
-		  </>
+				<GlobalStyle />
+				{name === null ? (
+					<Name saveName={this.saveName} />
+				) : (
+					<>
+						<Clock name={name} />
+					</>
+				)}
+			</>
 		);
 	}
 }
