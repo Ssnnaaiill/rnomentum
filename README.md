@@ -21,6 +21,10 @@ yarn add @fortawesome/react-fontawesome
 ```
 
 날씨 API를 코드 상에서 사용할 수 있도록 `[openweathermap](https://openweathermap.org)`에 signup한 후 API key를 발급받습니다.
+또한, API 정보를 쉽게 가져올 수 있도록 axios를 설치합니다.
+```
+yarn add axios
+```
 
 ## Components
 
