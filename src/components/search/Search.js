@@ -31,6 +31,12 @@ const Input = styled.input`
   padding-left: 1.5rem;
   padding-bottom: 0.5rem;
   display: ${prop => (prop.isOpen === true ? 'block' : 'none')};
+
+  /* Fadein Animations */
+  animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s;
+  -webkit-animation: fadein 0.5s;
+  -o-animation: fadein 0.5s;
 `;
 
 const Search = ({ value, isOpen, handleSubmit, handleChange, searchButton }) => (

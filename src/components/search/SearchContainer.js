@@ -21,8 +21,8 @@ class SearchContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    
     // submitted value will be redirected to url address with query
-    // window.location.href = `https://www.bing.com/search?q=${this.state.value}&PC=ATMM&FORM=MMXT01`;
     window.location.href = `https://www.google.com/search?q=${this.state.value}&oq=${this.state.value}&aqs=chrome..69i57.14453j0j0&sourceid=chrome&ie=UTF-8`;
   }
 
@@ -32,7 +32,8 @@ class SearchContainer extends Component {
     });
   }
 
-  searchButton = () => {
+  searchButton = (e) => {
+    e.preventDefault();
     this.setState({
       isOpen: !this.state.isOpen
     });

@@ -20,12 +20,23 @@ yarn add @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @
 yarn add @fortawesome/react-fontawesome
 ```
 
-## name
+날씨 API를 코드 상에서 사용할 수 있도록 `[openweathermap](https://openweathermap.org)`에 signup한 후 API key를 발급받습니다.
 
-## clock
+## Components
 
-## search
+### 메인 화면
 
-## weather
+### name
+처음 rnoomentum을 시작할 때 이름을 입력받습니다. 이 이름은 현재 세션의 localStorage에 저장되며, `clock` component의 greeting 문구에서 사용됩니다.
 
-## todo
+### clock
+현재 시간을 초 단위로 표시합니다. 표시되는 시간은 현재 자신의 컴퓨터 시간대를 기준으로 하며, 형식은 `HH:MM:SS` 입니다.
+
+### search
+좌측 상단에 고정되어 있는 컴포넌트로, 입력받은 문자열을 google에 검색할 수 있도록 합니다.
+
+### weather
+`openweathermap` API를 이용하여 현재 자신이 위치하고 있는 지역(위도, 경도 사용) 날씨를 표시합니다.
+
+### todo
+간단한 To do list를 구현합니다.

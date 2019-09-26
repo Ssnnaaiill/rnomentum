@@ -68,6 +68,42 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-color: #999;
     background-blend-mode: multiply;
-  }`;
+  }
+  
+
+  /* Animations */
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadein {
+    from {
+      opacity: 0;
+    } to {
+      oacity: 1;
+    }
+  }
+`;
 
 export default GlobalStyle;
