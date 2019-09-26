@@ -3,6 +3,7 @@ import GlobalStyle from './components/GlobalStyle';
 import Name from './components/name';
 import Clock from './components/clock';
 import Search from './components/search';
+import Weather from './components/weather';
 
 class App extends Component {
 
@@ -10,7 +11,7 @@ class App extends Component {
 		name: null,
 	};
 
-	saveName = data => {
+	saveName = (data) => {
 		this.setState({
 			name: data,
 		});
@@ -42,6 +43,7 @@ class App extends Component {
 					<>
 						<Clock name={name} />
 						<Search />
+						<Weather />
 					</>
 				)}
 			</>
