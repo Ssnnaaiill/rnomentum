@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { search } from '@fortawesome/free-solid-svg-icons';
+
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// search component is fixed at left top
 const Container = styled.div`
   position: fixed;
   display: flex;
   left: 0;
-  right: 0;
+  top: 0;
   margin: 1rem;
 `;
 
@@ -17,26 +19,25 @@ const Text = styled.span`
   font-weight: bold;
 `;
 
-const SearchIcon = styled.i`
+const SearchIcon = styled.div`
   position: absolute;
   cursor: pointer;
 `;
 
-// visibility will be shown differently according to the status of search browser
-// if browser is open, input is visible, else input is hidden
+// display of input slot will be shown differently according to the status of search browser
 const Input = styled.input`
   all: unset;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #fff;
   padding-left: 1.5rem;
   padding-bottom: 0.5rem;
-  visibility: ${prop => (prop.isOpen === true ? 'visible' : 'hidden')};
+  display: ${prop => (prop.isOpen === true ? 'block' : 'none')};
 `;
 
 const Search = ({ value, isOpen, handleSubmit, handleChange, searchButton }) => (
   <Container>
     <Text>Search</Text>
     <form onSubmit={handleSubmit}>
-      <SearchIcon className="fas fa-search" onClick={searchButton} />
+      <SearchIcon onClick={searchButton}><FontAwesomeIcon icon={faSearch} /></SearchIcon>
       <Input value={value} onChange={handleChange} isOpen={isOpen} />
     </form>
   </Container>

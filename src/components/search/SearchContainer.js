@@ -5,8 +5,9 @@ class SearchContainer extends Component {
   
 
   /**
-   * state
-   * search with given value in chrome google
+   * SearchContainerState
+   * Default state of search component
+   * Search with given value in chrome google
    * - value: given search keyword
    * - isOpen: chrome browser for searching with given value is open
    * @param value
@@ -20,7 +21,9 @@ class SearchContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `https://www.google.com/search?q=${this.state.value}&oq=asdf&aqs=chrome..69i57j0l5.741j0j7&sourceid=chrome&ie=UTF-8`;
+    // submitted value will be redirected to url address with query
+    // window.location.href = `https://www.bing.com/search?q=${this.state.value}&PC=ATMM&FORM=MMXT01`;
+    window.location.href = `https://www.google.com/search?q=${this.state.value}&oq=${this.state.value}&aqs=chrome..69i57.14453j0j0&sourceid=chrome&ie=UTF-8`;
   }
 
   handleChange = (e) => {

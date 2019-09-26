@@ -7,13 +7,13 @@ class NameContainer extends Component {
 		value: '',
 	};
 
-	handleChange = e => {
+	handleChange = (e) => {
 		this.setState({
 			value: e.target.value,
 		});
 	}
 
-	handleSubmit = e => {
+	handleSubmit = (e) => {
 		e.preventDefault();
 		const { value } = this.state;
 		this.props.saveName(value);
