@@ -15,8 +15,8 @@ class WeatherContainer extends Component {
 		baseURL: 'https://api.openweathermap.org/data/2.5',
 		params: {
       // my openweathermap api access key
-			APPID: '03006fb4cfc0808a3cdfb5eb05af87b0',
-		},
+			APPID: '03006fb4cfc0808a3cdfb5eb05af87b0'
+		}
 	});
 
 	componentDidMount() {
